@@ -1,0 +1,64 @@
+
+@keyframes jump {
+    0% {top: 190px;}
+    50% {top: 140px;}
+    100% {top: 190px;}
+}
+
+@keyframes down {
+    0%, 10% {top: 100px;}
+    10%, 40% {top: 90px;}
+    50% {top: 100px;}
+    70%, 90% {top: 90px;}
+    100% {top: 100px;}
+}
+
+
+body {
+    background: linear-gradient(90deg, rgb(165, 162, 162) , rgb(238, 236, 236));
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.scene {
+    position: fixed;
+    display: grid;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50vw;
+    height: 50vh;
+    background: linear-gradient(blue, white);
+    overflow: hidden;
+}
+
+.ball {
+    position: relative;
+    top: 180px;
+    left: 25px;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(white, rgb(48, 48, 48));
+
+    animation-name: jump;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.square {
+    position: relative;
+    top: 90px;
+
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 128, 0, 0.692);
+
+    animation-name: down;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
