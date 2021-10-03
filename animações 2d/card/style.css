@@ -22,14 +22,32 @@ body {
     height: 15rem;
     width: 13rem;
     padding: 10px 15px;
-    background: linear-gradient(rgb(182, 73, 73), rgb(207, 204, 204));
-    transition-property: height, width, background-image;
-    transition-duration: 0.8s;
-    transition-timing-function: linear;
+    background: linear-gradient(rgb(255, 25, 8), rgb(250, 142, 142));
+    transition-property: height, width, opacity;
+    transition-duration: 1s;
 }
 
 .card:hover {
-    height: 16rem;
-    width: 14rem;
-    background: linear-gradient(rgb(68, 11, 11), rgb(238, 238, 238));
+    height: 17rem;
+    width: 15rem;
+}
+
+.card::after {
+    position: absolute;
+    content: "";
+    height: 15rem;
+    width: 13rem;
+    top: 0;
+    left: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0),rgba(0, 0, 0, 0.493));
+    opacity: 0;
+    transition-property: opacity, height, width;
+    transition-duration: 1s;
+}
+
+
+.card:hover:after {
+    opacity: 1;
+    height: 17rem;
+    width: 15rem;
 }

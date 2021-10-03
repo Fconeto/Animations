@@ -1,0 +1,123 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient( rgb(92, 92, 92), rgb(201, 199, 199));
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 100vh;
+}
+
+.square {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    background: rgb(5, 160, 199);
+    transition-property: left, top;
+    transition-duration: 1s;
+}
+
+.circle {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgb(148, 56, 235);
+    transition-property: left, top;
+    transition-duration: 1s;
+}
+
+.triangle {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    transform: rotate(135deg) translateY(-50%);
+    background: linear-gradient(45deg,rgb(148, 56, 235)50%, rgba(0, 0, 255, 0)50%);
+    transition-property: left, top;
+    transition-duration: 1s;
+}
+
+.square:hover {
+    left: 25px;
+    top: -25px;
+}
+
+.square::before {
+    content: "";
+    position: relative;
+    display: flex;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    background: rgba(5, 160, 199, 0.61);
+    transition-property: left, top;
+    transition-duration: 1s;
+}
+
+.square:hover::before {
+    left: -10px;
+    top: 10px;
+}
+
+.circle:hover {
+    left: 25px;
+    top: -25px;
+}
+
+.circle::before {
+    content: "";
+    position: relative;
+    display: flex;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(149, 56, 235, 0.719);
+    transition-property: left, top;
+    transition-duration: 1s;
+}
+
+.circle:hover::before {
+    left: -10px;
+    top: 10px;
+}
+
+.triangle:hover {
+    left: 25px;
+    top: -25px;
+}
+
+.triangle::before {
+    content: "";
+    position: relative;
+    display: flex;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg,rgba(149, 56, 235, 0.705)50%, rgba(0, 0, 255, 0)50%);
+    transition-property: left, top;
+    transition-duration: 1s;
+}
+
+.triangle:hover::before {
+    left: 15px;
+    top: -5px;
+}
