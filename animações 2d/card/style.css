@@ -10,6 +10,26 @@ body {
 }
 
 .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     width: 100vw;
     height: 100vh;
+}
+
+.card {
+    position: relative;
+    height: 15rem;
+    width: 13rem;
+    padding: 10px 15px;
+    background: linear-gradient(rgb(182, 73, 73), rgb(207, 204, 204));
+    transition-property: height, width, background-image;
+    transition-duration: 0.8s;
+    transition-timing-function: linear;
+}
+
+.card:hover {
+    height: 16rem;
+    width: 14rem;
+    background: linear-gradient(rgb(68, 11, 11), rgb(238, 238, 238));
 }
