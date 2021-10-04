@@ -9,30 +9,37 @@
 </head>
 <body>
     <div class="container">
-        <div class="rosto">
+        <div id="face" class="rosto">
             <div class="olho um"></div>
             <div class="olho dois"></div>
-            <div class="labio boca"></div>
+            <div id="mouth" class="boca"></div>
         </div>
 
+    </div>
+
+    <div class="container">
+        <div class="gato">
+
+        </div>
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-    var boca = $(".labio");
-    var rosto = $(".rosto");
-    rosto.click( () => {
+    var boca = $("#mouth");
+    var rosto = $("#face");
+    rosto.mouseover( () => {
         if (boca.hasClass("sorriso") == false) {
             boca.addClass("sorriso");
             boca.removeClass("triste");
         }
-        else {
-            boca.addClass("triste");
+        
+    })
+    rosto.mouseout( () => {
+        if (boca.hasClass("sorriso") == true) {
             boca.removeClass("sorriso");
+            boca.addClass("triste");
         }
-        
-        boca.removeClass("boca");
-        
+
     })
 </script>
 </html>

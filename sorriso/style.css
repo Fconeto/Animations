@@ -3,6 +3,23 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    cursor: url(Desenho_mao.png), auto;;
+}
+
+@keyframes olho {
+    0% {
+
+    }
+    100% {
+        width: 50px;
+    height: 20px;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+    border-top: 10px solid black;
+    margin-right: 50px;
+    border-radius: 50px 50px 0 0;
+    
+    }
 }
 
 @keyframes triste {
@@ -11,24 +28,31 @@
     border-left: 10px solid black;
     border-right: 10px solid black;
     border-bottom: 10px solid black;
+    border-top: 10px solid black;
     }
-    100% {border-radius: 100px 100px 0 0 ;
+    60%, 100% {border-radius: 100px 100px 0 0 ;
         border-left: 10px solid black;
         border-right: 10px solid black;
-        border-top: 10px solid black;}
+        border-top: 10px solid black;
+        border-bottom: 10px solid black;
+    }
 }
 
 @keyframes sorrir {
-    0% {border-radius: 100px 100px 0 0 ;
+    0%{border-radius: 100px 100px 0 0 ;
         border-left: 10px solid black;
         border-right: 10px solid black;
-        border-top: 10px solid black;}
+        border-top: 10px solid black;
+        border-bottom: 10px solid black;
+
+    }
     
-    100% {
-        border-radius: 0 0 100px 100px ;
+    50%, 100% {
+    border-radius: 0 0 100px 100px ;
     border-left: 10px solid black;
     border-right: 10px solid black;
     border-bottom: 10px solid black;
+    border-top: 10px solid black;
     }
 }
 
@@ -47,12 +71,9 @@ body {
     align-items: center;
     width: 50vh;
     height: 50vh;
-    background: chartreuse;
 }
 
 .rosto {
-    display: flex;
-    align-items: center;
     width: 250px;
     height: 250px;
     border-radius: 50%;
@@ -61,54 +82,88 @@ body {
 
 .olho {
     position: relative;
-    top: -30px;
-    left: 50px;
-    min-width: 50px;
-    min-height: 50px;
+    left: 50%;
+    transform: translate(-50%);    
+    width: 50px;
+    height: 50px;
     background: black;
     margin-right: 50px;
-    border-radius: 50px 50px 0 0 ;
-    
+    border-radius: 50px 50px 0 0;
+    box-shadow: 0 0 0 10px inset black,
+    0 0 0 50px inset white;
+}
+
+.feliz {
+    animation-name: olho;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.um {
+    position: relative;
+    top: 50px;
+    left: 30%;
+}
+
+.dois {
+    position: relative;
+    left: 70%;
 }
 
 .boca {
     position: relative;
-    right: 150px;
-    top: 50px;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%);
 
-    min-width: 150px;
-    min-height: 70px;
+    width: 150px;
+    height: 70px;
+    background: white;
     border-radius: 100px 100px 0 0 ;
     border-left: 10px solid black;
     border-right: 10px solid black;
     border-top: 10px solid black;
+    border-bottom: 10px solid black;
 }
 
 .sorriso {
     position: relative;
-    right: 150px;
-    top: 50px;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%);
 
-    min-width: 150px;
-    min-height: 70px;
+    width: 150px;
+    height: 70px;
+    background: white;
+
+
     animation-name: sorrir;
-    animation-duration: 1s;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
 
 .triste {
     position: relative;
-    right: 150px;
-    top: 50px;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%);
 
-    min-width: 150px;
-    min-height: 70px;
-    border-radius: 100px 100px 0 0 ;
-    border-left: 10px solid black;
-    border-right: 10px solid black;
-    border-top: 10px solid black;
+    width: 150px;
+    height: 70px;
+    background: white;
+
 
     animation-name: triste;
-    animation-duration: 1s;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
     animation-fill-mode: forwards;
+}
+
+.gato {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgb(192, 188, 188);
 }
