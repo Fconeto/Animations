@@ -66,6 +66,8 @@ body {
     width: 200px;
     height: 200px;
     background: rgba(5, 160, 199, 0.61);
+    border-left: 12px rgba(21, 199, 5, 0.37);
+
     transition-property: left, top;
     transition-duration: 1s;
 }
