@@ -6,30 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorriso</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
     <div class="container">
-        <div id="face" class="rosto">
-            <div class="olho um"></div>
-            <div class="olho dois"></div>
-            <div id="mouth" class="boca"></div>
+        <div id="face" class="rosto-pessoa">
+            <div id="eyes" class="olhos-pessoa">
+                <div id="eye-1" class="um"></div>
+                <div id="eye-2" class="dois"></div>
+            </div>
+            <div id="mouth" class="boca-pessoa"></div>
         </div>
 
     </div>
 
     <div class="container">
-        <div class="gato">
-
+            
+            <div id="face-cat" class="rosto-gato">
+                <div class="orelhas">
+                    <div ></div>
+                    <div></div>
+                </div>
+                <div id="eyes-cat" class="olhos-gato">
+                    <div id="eye-3" class="tres"></div>
+                    <div id="eye-4" class="quatro"></div>
+                </div>
+                <div id="mouth-cat" class="boca-gato">
+                    <div class="esq"></div>
+                    <div class="dir"></div>
+                </div>
         </div>
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
+    var olho1 = $("#eye-1");
+    var olho2 = $("#eye-2");
     var boca = $("#mouth");
     var rosto = $("#face");
     rosto.mouseover( () => {
         if (boca.hasClass("sorriso") == false) {
             boca.addClass("sorriso");
+
+            olho1.removeClass("olho-triste");
+            olho2.removeClass("olho-triste");
+            olho1.addClass("olho-feliz");
+            olho2.addClass("olho-feliz");
+            
             boca.removeClass("triste");
         }
         
@@ -37,6 +60,13 @@
     rosto.mouseout( () => {
         if (boca.hasClass("sorriso") == true) {
             boca.removeClass("sorriso");
+            olho1.removeClass("olho-feliz");
+            olho2.removeClass("olho-feliz");
+            olho1.addClass("olho-triste");
+            olho2.addClass("olho-triste");
+            
+            
+
             boca.addClass("triste");
         }
 
