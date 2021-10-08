@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* 
+body {
+    width: 100vw;
+    height: 100vh;
+} */
 
 .container {
     display: flex;
@@ -64,16 +69,28 @@ p {
     height: 30%;
     top: 60%;
     transform: translateY(-81%);
+
+    transition-property: width, height;
+    transition-duration: 1s;
 }
 
 .livro-1 {
     position: relative;
     height: 100%;
     width: 10%;
+    bottom: 0;
     border-radius: 4.5px;
     background: linear-gradient(to right, rgb(199, 7, 7), rgb(236, 18, 18));
     box-shadow: 0 0 10px 0 inset rgb(133, 5, 5);
-    
+
+    transition-property: width, height, bottom;
+    transition-duration: 1s;
+}
+
+.livro-1:hover {
+    width: 12%;
+    height: 105%;
+    bottom: 5%;
 }
 
 .livro-1 p {
@@ -88,11 +105,23 @@ p {
     background: linear-gradient(to right, rgb(146, 59, 19), rgb(199, 117, 23));
     box-shadow: 0 0 10px 0 inset rgb(87, 16, 16);
 
-    font-family: Arial, Helvetica, sans-serif;
+    bottom: 0;
+    transition-property: width, height, bottom;
+    transition-duration: 1s;
+}
+
+.livro-2:hover {
+    width: 14%;
+    height: 105%;
+    bottom: 5%;
 }
 
 .livro-2 p {
+    top: 20%;
+
     color: rgb(202, 202, 2);
+    font-size: 20px;
+
 }
 
 .livro-3 {
@@ -102,7 +131,16 @@ p {
     border-radius: 4.5px;
     background: linear-gradient(to right, rgb(39, 70, 10), rgb(19, 90, 19));
     box-shadow: 0 0 10px 0 inset rgb(16, 63, 4);;
-    
+ 
+    bottom: 0;
+    transition-property: width, height, bottom;
+    transition-duration: 1s;
+}
+
+.livro-3:hover {
+    width: 13%;
+    height: 105%;
+    bottom: 5%;
 }
 
 .livro-3 p {
@@ -119,6 +157,21 @@ p {
     background: linear-gradient(to right, rgb(138, 85, 6), rgb(172, 123, 18));
     box-shadow: 0 0 10px 0 inset rgb(82, 61, 5);
     
+    bottom: 0;
+    transition-property: width, height, bottom;
+    transition-duration: 1s;
+}
+
+.livro-4:hover {
+    width: 16%;
+    height: 105%;
+    bottom: 5%;
+}
+
+.livro-4 p {
+    top: 12%;
+    font-size: 20px;
+
 }
 
 .livro-5 {
@@ -128,10 +181,44 @@ p {
     border-radius: 4.5px;
     background: linear-gradient(to right, rgb(187, 190, 4), rgb(245, 222, 15));
     box-shadow: 0 0 10px 0 inset rgb(103, 110, 4);
-    
+
+    bottom: 0;
+    transition-property: width, height, bottom;
+    transition-duration: 1s;
+}
+
+.livro-5:hover {
+    width: 18%;
+    height: 105%;
+    bottom: 5%;
 }
 
 .livro-5 p {
     top: 40%;
     color: rgb(114, 82, 22);
+    font-size: 20px;
+
+}
+
+.detalhe {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -33px;
+    width: 100%;
+    height: 30px;
+    border-radius: 50px 50px 0 0 ;
+    background: linear-gradient(to right, rgb(133, 73, 16) , rgb(145, 89, 16));
+    box-shadow: 0 0 5px 0 rgb(92, 60, 18),
+    0 0 10px 0 black;
+}
+
+.simbolo {
+    width: 15px;
+    height: 15px;
+    border-radius: 10px 10px 50% 50% ;
+    background: radial-gradient(rgb(218, 218, 9), rgb(206, 206, 5));
+    box-shadow: 10px 0 0 0 rgb(218, 218, 9),
+    -10px 0 0 0 rgb(218, 218, 9);
 }
