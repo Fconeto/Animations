@@ -1,0 +1,32 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    
+}
+
+.fundo {
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(at calc(100% * var(--mouse-x)) calc(100% * var(--mouse-y)), transparent, black);
+}
+
+.xadrez {
+    width: 100px;
+    height: 100px;
+    background:
+     conic-gradient(#fff 0.25turn, #000 0.25turn 0.5turn, #fff 0.5turn 0.75turn, #000 0.75turn)
+     top left / 25% 25% repeat;
+    border: 1px solid;
+}
+
+.alvo {
+    width: 100px;
+    height: 100px;
+    background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
+}
