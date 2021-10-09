@@ -5,30 +5,57 @@
     box-sizing: border-box;
 }
 
-.fundo {
-    display: flex;
-    
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 2rem 2rem 0.5rem 2rem;
+}
+
+h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 1rem 2rem 0.5rem 2rem;
+}
+
+.controls {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: inline-block;
+    min-width: 25rem;
+    min-height: 2.5rem;
+    margin: 0 2rem 1rem 2rem;
+    background: chartreuse;
+}
+
+.controls input {
+    width: 2rem;
+    height: 1.5rem;
+    margin: 0.5rem 0.5rem 1rem 0.5rem;
+}
+
+body {
     width: 100vw;
     height: 100vh;
     background: repeating-radial-gradient(farthest-corner at 30% 40%,rgb(179, 101, 17)10px, rgb(179, 111, 17) 115px, rgb(179, 108, 17)180px, rgb(179, 108, 17) 200px);
 }
 
 .controle {
+    display: flex;
     position: absolute;
     top: 200px;
     left: 290px;
     width: 640px;
     height: 270px;
     border-radius: 25%;
-    background: rgb(15, 15, 15);
+    background: linear-gradient(120deg,rgb(15, 15, 15) 25%, rgb(10, 10, 10)50%);
+
 }
 
 .controle::before {
+    display: flex;
+
     content: "";
     position: absolute;
     top: 60px;
     left: -68px;
-    border-left: 200px solid rgb(20, 20, 20);
+    border-left: 200px solid rgb(8, 8, 8);
     border-radius: 70% 50% 500% 200%;
     transform: rotate(20deg);
     width: 10px;
@@ -36,11 +63,13 @@
 }
 
 .controle::after {
+    display: flex;
+
     content: "";
     position: absolute;
     top: 60px;
     left: 496px;
-    border-right: 200px solid rgb(20, 20, 20);
+    border-right: 200px solid rgb(8, 8, 8);
     border-radius: 70% 50% 200% 500%;
     transform: rotate(-20deg);
     width: 10px;
@@ -48,52 +77,88 @@
 }
 
 .container-analogico {
+    display: flex;
+
     position: absolute;
     top: 180px;
     left: 115px;
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: black;
+    background: linear-gradient(110deg, rgb(31, 30, 30), black);
     z-index: 10;
 
 }
 
 .container-analogico::before {
+
     content: "";
     position: absolute;
     left: 178%;
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: black;
+    background: linear-gradient(120deg, rgb(36, 35, 35), black);
     z-index: 10;
+}
 
+.analogico-direito {
+
+    position: absolute;
+    left: 195%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(120deg, rgb(22, 22, 22), rgb(10, 10, 10));
+    box-shadow: 0 0 1px 5px black;
+    z-index: 10;
+}
+
+.analogico-esquerdo {
+
+    position: absolute;
+    left: calc(var(--mouse-x) * 0.66rem);
+    top: calc(var(--mouse-y) * 0.66rem);
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(120deg, rgb(22, 22, 22), rgb(10, 10, 10));
+    box-shadow: 0 0 1px 5px black;
+    z-index: 10;
 }
 
 .container-setas {
+    display: flex;
+
     position: absolute;
     top: -15px;
     left: -15px;
     width: 245px;
     height: 245px;
     border-radius: 50%;
-    background: black;
+    background: linear-gradient(120deg, rgb(22, 22, 22)5%, rgb(15, 15, 15) 25%, rgb(10, 10, 10)40%);
     z-index: 5;
 }
 
 .container-botoes {
+    display: flex;
+
     position: absolute;
     top: -15px;
     left: 415px;
     width: 245px;
     height: 245px;
     border-radius: 50%;
-    background: black;
+    background: linear-gradient(120deg, rgb(22, 22, 22)5%, rgb(15, 15, 15) 15%, rgb(10, 10, 10)40%);
     z-index: 5;
 }
 
 .setas {
+    display: flex;
+
     position: absolute;
     display: flex;
     justify-content: center;
@@ -102,28 +167,50 @@
     left: 50px;
     width: 150px;
     height: 150px;
-    background: rgb(31, 7, 7);
+}
+
+
+.setas::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 160px;
+    border-radius: 5px;
+    background: rgb(5, 5, 5);
+}
+
+.setas::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 160px;
+    border-radius: 5px;
+    transform: rotate(90deg);
+    background: rgb(5, 5, 5);
 }
 
 .setas div{
+    display: flex;
+
     position: absolute;
     
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 5px 5px 15px 15px;
 
-    box-shadow: 0 0 1px 5px black;
-    background: gray;
+    box-shadow: 0 0 1px 3px black;
+    background: rgb(53, 53, 53);
     z-index: 10;
 }
 
 .setas .esquerda {    
-    left: 15px;
+    left: 30px;
     transform: rotate(270deg);
+
 }
 
 .setas .cima {
-    top: 20px;
+    top: 30px;
     transform: rotate(0);
 }
 
@@ -134,11 +221,13 @@
 }
 
 .setas .direita {
-    left: 95px;
+    left: 90px;
     transform: rotate(90deg);
 }
 
 .botoes {
+    display: flex;
+
     position: absolute;
     display: flex;
     justify-content: center;
@@ -147,15 +236,35 @@
     left: 50px;
     width: 150px;
     height: 150px;
-    background: rgb(31, 7, 7);
+}
+
+.botoes::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 160px;
+    border-radius: 5px;
+    background: rgb(5, 5, 5);
+}
+
+.botoes::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 160px;
+    border-radius: 5px;
+    transform: rotate(90deg);
+    background: rgb(5, 5, 5);
 }
 
 .botoes div {
+
     position: absolute;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background: linear-gradient(120deg, rgb(10, 10, 10),rgb(0, 0, 0));
+    z-index: 20;
 }
 
 .botoes .bola {    
@@ -226,4 +335,41 @@
     border-right: 13px solid transparent;
     border-bottom: 20px solid rgb(0, 0, 0);
     z-index: 10;
+}
+
+.select-analog {
+    position: absolute;
+    top: 7rem;
+    left: 17rem;
+    width: 1.5rem;
+    height: 1rem;
+    background: rgb(44, 43, 43);
+    border-radius: 2px;
+    box-shadow: 0 0 1px 2px black;
+}
+
+.select-analog::before {
+    content: "";
+    position: absolute;
+    top: 4rem;
+    left: 3.5rem;
+    width: 1.5rem;
+    height: 1rem;
+    background: rgb(44, 43, 43);
+    border-radius: 2px;
+    box-shadow: 0 0 1px 2px black;
+    z-index: 100;
+}
+
+.select-analog::after {
+    content: "";
+    position: absolute;
+    top: -0.2rem;
+    left: 7rem;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 25px solid rgb(44, 43, 43);
+    transform: rotate(90deg);
+    width: 0;
+    height: 0;
 }

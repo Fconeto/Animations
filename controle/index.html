@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="fundo">
+    <h1>Created by: Francisco Neto</h1>
         <div class="controle">
-            <div class="container-analogico">
-                <div class="analogico-direito"></div>
-                <div class="analogico-esquerdo"></div>
+            <div id="cont-an" class="container-analogico">
+                <div id="an-dir" class="analogico-direito"></div>
+                <div id="an-esq" class="analogico-esquerdo"></div>
             </div>
             <div class="container-setas">
             <div class="setas">
@@ -20,6 +20,10 @@
                 <div class="direita"></div>
                 <div class="cima"></div>
                 <div class="baixo"></div>
+            </div>
+            <div class="meio">
+                <div class="select-analog"></div>
+                <div class="start"></div>
             </div>
             </div>
             <div class="container-botoes">
@@ -37,7 +41,36 @@
             </div>
             
         </div>
-    </div>
 </body>
+<script>
+    var root = document.documentElement;
+    const contAn = document.getElementById("cont-an");
+    const analogicoEsquerdo = document.getElementById("an-esq");
+    const analogicoDireito = document.getElementById("an-dir");
+
+    analogicoEsquerdo.addEventListener("mousemove", evento => {
+        let x = evento.clientX / innerWidth;
+        let y = evento.clientY / innerHeight;
+
+        x *= x * (x + 1.5) * 15;
+        y *= y * 15;
+
+        root.style.setProperty("--mouse-x", x);
+        root.style.setProperty("--mouse-y", y);
+
+    })
+
+    analogicoDireito.addEventListener("mousemove", evento2 => {
+        let x = evento2.clientX / innerWidth;
+        let y = evento2.clientY / innerHeight;
+
+        x *= x * (x + 1.5) * 15;
+        y *= y * 15;
+
+        root.style.setProperty("--mouse-x", x);
+        root.style.setProperty("--mouse-y", y);
+
+    })
+</script>
 
 </html>
