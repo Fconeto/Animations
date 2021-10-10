@@ -9,10 +9,16 @@
 </head>
 <body>
     <h1>Created by: Francisco Neto</h1>
+
+    <div class="tela">
+        <div id="egg" class="boneco"></div>
+    </div>
         <div class="controle">
-            <div id="cont-an" class="container-analogico">
-                <div id="an-dir" class="analogico-direito"></div>
+            <div id="cont-esq" class="container-analogico-esq">
                 <div id="an-esq" class="analogico-esquerdo"></div>
+            </div>
+            <div id="cont-dir" class="container-analogico-dir">
+                <div id="an-dir" class="analogico-direito"></div>
             </div>
             <div class="container-setas">
             <div class="setas">
@@ -44,31 +50,32 @@
 </body>
 <script>
     var root = document.documentElement;
-    const contAn = document.getElementById("cont-an");
     const analogicoEsquerdo = document.getElementById("an-esq");
     const analogicoDireito = document.getElementById("an-dir");
+    let egg = document.getElementById("egg");
 
     analogicoEsquerdo.addEventListener("mousemove", evento => {
-        let x = evento.clientX / innerWidth;
-        let y = evento.clientY / innerHeight;
+        let x = evento.offsetX / innerWidth;
+        let y = evento.offsetY / innerHeight;
 
-        x *= x * (x + 1.5) * 15;
-        y *= y * 15;
+        x *=  40;
+        y *=  30;
 
-        root.style.setProperty("--mouse-x", x);
-        root.style.setProperty("--mouse-y", y);
+        root.style.setProperty("--mouse-esq-x", x);
+        root.style.setProperty("--mouse-esq-y", y);
 
     })
 
     analogicoDireito.addEventListener("mousemove", evento2 => {
-        let x = evento2.clientX / innerWidth;
-        let y = evento2.clientY / innerHeight;
+        let x = evento2.offsetX  / innerWidth;
+        let y = evento2.offsetY / innerHeight;
 
-        x *= x * (x + 1.5) * 15;
-        y *= y * 15;
+        x *= 40;
+        y *= 30;
 
-        root.style.setProperty("--mouse-x", x);
-        root.style.setProperty("--mouse-y", y);
+
+        root.style.setProperty("--mouse-dir-x", x);
+        root.style.setProperty("--mouse-dir-y", y);
 
     })
 </script>
