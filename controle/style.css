@@ -11,11 +11,6 @@ h1 {
     margin: 2rem 2rem 0.5rem 2rem;
 }
 
-h2 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 1rem 2rem 0.5rem 2rem;
-}
-
 .tela {
     display: flex;
     position: absolute;
@@ -24,7 +19,7 @@ h2 {
     top: 2rem;
     left: 32rem;
     width: 280px;
-    height: 120px;
+    height: 130px;
     border-radius: 10px;
     background-color: rgb(43, 43, 46);
 }

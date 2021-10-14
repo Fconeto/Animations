@@ -1,0 +1,209 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#39A388 80vmin, #064420 80vmin);
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 5vmin;
+    width: 5vmin;
+    height: 20vmin;
+    border-radius: 50% 50% 0 0 ;
+    z-index: 10;
+    box-shadow: 32vmin 59vmin 0 -0.3vmin #492F10,
+    35vmin 59vmin  0 -0.3vmin #492F10,
+    38vmin 59vmin  0 -0.3vmin #492F10,
+    32vmin 48vmin  0 -0.3vmin #492F10,
+    35vmin 48vmin  0 -0.3vmin #492F10,
+    38vmin 48vmin  0 -0.3vmin #492F10,
+
+    -35vmin 60vmin  0 -0.3vmin #492F10,
+    -41vmin 60vmin  0 -0.3vmin #492F10,
+    -47vmin 60vmin  0 -0.3vmin #492F10,
+    -53vmin 60vmin  0 -0.3vmin #492F10,
+    -59vmin 60vmin  0 -0.3vmin #492F10,
+    -65vmin 60vmin  0 -0.3vmin #492F10,
+    -71vmin 60vmin  0 -0.3vmin #492F10,
+    -77vmin 60vmin  0 -0.3vmin #492F10,
+    -83vmin 60vmin  0 -0.3vmin #492F10,
+    -89vmin 60vmin  0 -0.3vmin #492F10,
+    -95vmin 60vmin  0 -0.3vmin #492F10,
+    -101vmin 60vmin  0 -0.3vmin #492F10,
+    -107vmin 60vmin  0 -0.3vmin #492F10,
+    -113vmin 60vmin  0 -0.3vmin #492F10,
+
+    -35vmin 60vmin black,
+    -41vmin 60vmin  black,
+    -47vmin 60vmin  black,
+    -53vmin 60vmin  black,
+    -59vmin 60vmin  black,
+    -65vmin 60vmin  black,
+    -71vmin 60vmin  black,
+    -77vmin 60vmin  black,
+    -83vmin 60vmin  black,
+    -89vmin 60vmin  black,
+    -95vmin 60vmin  black,
+    -101vmin 60vmin  black,
+    -107vmin 60vmin  black,
+    -113vmin 60vmin  black,
+
+    32vmin 59vmin black,
+    35vmin 59vmin black,
+    38vmin 59vmin black,
+    32vmin 48vmin black,
+    35vmin 48vmin black,
+    38vmin 48vmin black;
+    
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 5vmin;
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 50%;
+    box-shadow: -12vmin 68vmin 0 -0.3vmin green,
+    12vmin 68vmin 0 -0.3vmin green,
+    -6vmin 60vmin 0 -0.3vmin green,
+    6vmin 60vmin 0 -0.3vmin green,
+    0vmin 68vmin 0 -0.3vmin green,
+    0vmin 68vmin black,
+    -12vmin 68vmin black,
+    12vmin 68vmin black,
+    -6vmin 60vmin black,
+    6vmin 60vmin black,
+    18vmin 33vmin 0 -8vmin red,
+    19vmin 33vmin 0 -8vmin red,
+    18vmin 33vmin 0 -7.85vmin black,
+    19vmin 33vmin 0 -7.85vmin black,
+    31vmin 35vmin 0 -8vmin red,
+    32vmin 35vmin 0 -8vmin red,
+    31vmin 35vmin 0 -7.85vmin black,
+    32vmin 35vmin 0 -7.85vmin black,
+    39vmin 28vmin 0 -8vmin red,
+    40vmin 28vmin 0 -8vmin red,
+    39vmin 28vmin 0 -7.85vmin black,
+    40vmin 28vmin 0 -7.85vmin black,
+    24vmin 25vmin 0 -8vmin red,
+    25vmin 25vmin 0 -8vmin red,
+    24vmin 25vmin 0 -7.85vmin black,
+    25vmin 25vmin 0 -7.85vmin black,
+    45vmin 36vmin 0 -8vmin red,
+    46vmin 36vmin 0 -8vmin red,
+    45vmin 36vmin 0 -7.85vmin black,
+    46vmin 36vmin 0 -7.85vmin black,
+
+    35vmin 35vmin 0 -3.5vmin green,
+    30vmin 35vmin 0 -3.5vmin green,
+    40vmin 35vmin 0 -3.5vmin green,
+    45vmin 33vmin 0 -3.5vmin green,
+    45vmin 30vmin 0 -3.5vmin green,
+    46vmin 31vmin 0 -3.5vmin green,
+    44vmin 27vmin 0 -3.5vmin green,
+    40vmin 25vmin 0 -3.5vmin green,
+    25vmin 33vmin 0 -3.5vmin green,
+    23vmin 35vmin 0 -3.5vmin green,
+    20vmin 35vmin 0 -5.5vmin green,
+    20vmin 33vmin 0 -3.5vmin green,
+    22vmin 30vmin 0 -3.5vmin green,
+    24vmin 31vmin 0 -3.5vmin green,
+    25vmin 27vmin 0 -3.5vmin green,
+    27vmin 25vmin 0 -3.5vmin green,
+    33vmin 23vmin 0 -3.5vmin green,
+    
+    35vmin 35vmin 0 -3.2vmin black,
+    30vmin 35vmin 0 -3.2vmin black,
+    40vmin 35vmin 0 -3.2vmin black,
+    45vmin 33vmin 0 -3.2vmin black,
+    45vmin 30vmin 0 -3.2vmin black,
+    46vmin 31vmin 0 -3.2vmin black,
+    44vmin 27vmin 0 -3.2vmin black,
+    40vmin 25vmin 0 -3.2vmin black,
+    25vmin 33vmin 0 -3.2vmin black,
+    23vmin 35vmin 0 -3.2vmin black,
+    20vmin 33vmin 0 -3.2vmin black,
+    22vmin 30vmin 0 -3.2vmin black,
+    24vmin 31vmin 0 -3.2vmin black,
+    25vmin 27vmin 0 -3.2vmin black,
+    27vmin 25vmin 0 -3.2vmin black,
+    33vmin 23vmin 0 -3.2vmin black;
+    z-index: 100;
+}
+
+.camouflage {
+    position: relative;
+    top: 58vmin;
+    left: 5vmin;
+    width: 10vmin;
+    height: 10vmin;
+    border-radius: 40% 40% 5% 5%;
+    background-color: #39A388;
+    box-shadow: 0 0.1vmin 0 0.1vmin inset rgba(0, 0, 0, 0.158);
+    z-index: 10;
+    transition-property: background-color, box-shadow;
+    transition-duration: 1s;
+    z-index: 1;
+}
+
+.camouflage::after {
+    content: "";
+    position: absolute;
+    top: -30vmin;
+    left: 30vmin;
+    width: 10vmin;
+    height: 10vmin;
+    border-radius: 40% 40% 5% 5%;
+    background-color: #39A388;
+    box-shadow: 0 0.1vmin 0 0.1vmin inset rgba(0, 0, 0, 0.158);
+    transition-property: background-color, box-shadow;
+    transition-duration: 1s;
+}
+
+.camouflage:hover::after {
+    background-color: #3FA598;
+    box-shadow: 0 0.1vmin 0 0.1vmin inset black,
+    0 0 0 2vmin inset #3FA598,
+    0 0 0 2.1vmin inset #030303;
+}
+
+.camouflage:hover {
+    background-color: #3FA598;
+    box-shadow: 0 0.1vmin 0 0.1vmin inset black,
+    0 0 0 2vmin inset #3FA598,
+    0 0 0 2.1vmin inset #030303;
+}
+
+.camouflage::before {
+    content: "";
+    position: absolute;
+    top: 4vmin;
+    left: 35vmin;
+    width: 10vmin;
+    height: 10vmin;
+    border-radius: 40% 40% 5% 5%;
+    transform: rotate(45deg);
+
+    background-color: #39A388;
+    box-shadow: 0 0.1vmin 0 0.1vmin inset rgba(0, 0, 0, 0.158);
+    transition-property: background-color, box-shadow;
+    transition-duration: 1s;
+}
+
+.camouflage:hover::before {
+    background-color: #3FA598;
+    box-shadow: 0 0.1vmin 0 0.1vmin inset black,
+    0 0 0 2vmin inset #3FA598,
+    0 0 0 2.1vmin inset #030303;
+}
