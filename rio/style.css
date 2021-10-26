@@ -1,0 +1,108 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ondas: 0 0 0.5vmin calc(0vmin + 0.1vmin) inset #5dad98,
+    0 0 0.5vmin calc(0vmin + 0.2vmin) inset #40796a,
+    0 0 1vmin calc(0vmin + 0.5vmin) inset #498a78,
+    0 0 5.5vmin calc(0vmin + 1vmin) inset #5bad96,
+    0 0 0vmin calc(0vmin + 2vmin) inset #39A388,
+
+    0 0 0.5vmin calc(2vmin + 0.1vmin) inset #5dad98,
+    0 0 0.5vmin calc(2vmin + 0.2vmin) inset #40796a,
+    0 0 1vmin calc(2vmin + 0.5vmin) inset #498a78,
+    0 0 5.5vmin calc(2vmin + 1vmin) inset #5bad96,
+    0 0 0vmin calc(2vmin + 2vmin) inset #39A388,
+
+    0 0 0.5vmin calc(4vmin + 0.1vmin) inset #5dad98,
+    0 0 0.5vmin calc(4vmin + 0.2vmin) inset #40796a,
+    0 0 1vmin calc(4vmin + 0.5vmin) inset #498a78,
+    0 0 5.5vmin calc(4vmin + 1vmin) inset #5bad96,
+    0 0 0vmin calc(4vmin + 2vmin) inset #39A388,
+
+    0 0 0.5vmin calc(6vmin + 0.1vmin) inset #5dad98,
+    0 0 0.5vmin calc(6vmin + 0.2vmin) inset #40796a,
+    0 0 1vmin calc(6vmin + 0.5vmin) inset #498a78,
+    0 0 5.5vmin calc(6vmin + 1vmin) inset #5bad96,
+    0 0 0vmin calc(6vmin + 2vmin) inset #39A388,
+
+    0 0 0.5vmin calc(8vmin + 0.1vmin) inset #5dad98,
+    0 0 0.5vmin calc(8vmin + 0.2vmin) inset #40796a,
+    0 0 1vmin calc(8vmin + 0.5vmin) inset #498a78,
+    0 0 5.5vmin calc(8vmin + 1vmin) inset #5bad96,
+    0 0 0vmin calc(8vmin + 2vmin) inset #39A388,
+
+    0 0 0.5vmin calc(10vmin + 0.1vmin) inset #5dad98,
+    0 0 0.5vmin calc(10vmin + 0.2vmin) inset #40796a,
+    0 0 1vmin calc(10vmin + 0.5vmin) inset #498a78,
+    0 0 5.5vmin calc(10vmin + 1vmin) inset #5bad96,
+    0 0 0vmin calc(50vmin + 2vmin) inset #39A388
+    ;
+}
+
+@keyframes onda {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    100% {
+        width: 50vmin;
+        height: 50vmin;
+    }
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: #39A388;
+}
+
+.circulo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(100% * var(--mouse-y));
+    left:  calc(100% * var(--mouse-x));
+    transform: translateY(-50%) translateX(-50%);
+    
+    width: 0.1vmin;
+    height: 0.1vmin;
+    border-radius: 50%;
+    background-color: #2b7a67;
+    z-index: 10;
+    opacity: 0.5;
+
+    box-shadow: var(--ondas);
+
+    transition-property: width, height;
+    transition-duration: 1.4s;
+    transition-timing-function:ease-out;
+}
+
+.ondinha {
+    width: 50vmin;
+    height: 50vmin;
+}
+
+
+.planta {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50vmin;
+    left: 10vmin;
+    transform: translateY(-50%);
+    width: 20vmin;
+    height: 20vmin;
+    background-color: #5bad96;
+
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="circle" class="circulo"></div>
+    <div class="planta"></div>
+    <div class="flor"></div>
+</body>
+
+<script>
+    var root = document.documentElement;
+    const circle = document.getElementById("circle");
+    
+    document.addEventListener("mousemove", ev => {
+        const x = ev.clientX / innerWidth;
+        const y = ev.clientY / innerHeight;
+
+        root.style.setProperty("--mouse-x", x);
+        root.style.setProperty("--mouse-y", y);
+
+
+    });
+
+    document.addEventListener("click", evento => {
+        
+
+
+        circle.classList.toggle("ondinha");
+        
+        setTimeout(() => { circle.classList.remove("ondinha"); }, 3000);
+    })
+</script>
+</html>
