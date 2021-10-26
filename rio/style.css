@@ -7,7 +7,7 @@
 
 :root {
     --ondas: 0 0 0.5vmin calc(0vmin + 0.1vmin) inset #5dad98,
-    0 0 0.5vmin calc(0vmin + 0.2vmin) inset #40796a,
+    0 0 0.5vmin calc(0vmin + 0.2vmin) inset #4c8f7c,
     0 0 1vmin calc(0vmin + 0.5vmin) inset #498a78,
     0 0 5.5vmin calc(0vmin + 1vmin) inset #5bad96,
     0 0 0vmin calc(0vmin + 2vmin) inset #39A388,
@@ -62,35 +62,50 @@ body {
     width: 100%;
     height: 100vh;
     background: #39A388;
+    overflow: hidden;
+
 }
 
-.circulo {
+.over {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: calc(100% * var(--mouse-y));
-    left:  calc(100% * var(--mouse-x));
+    top: calc(100% * var(--m-y));
+    left:  calc(100% * var(--m-x));
     transform: translateY(-50%) translateX(-50%);
+    border-radius: 50%;
+
+    overflow: hidden;
+    width: 40vmin;
+    height: 40vmin;
     
-    width: 0.1vmin;
-    height: 0.1vmin;
+}
+
+.over :first-child{
+    position: absolute;
+    
+    /* top: calc(100% * var(--m-y));
+    left:  calc(100% * var(--m-x));
+    transform: translateY(-50%) translateX(-50%); */
+    
+    width: 0;
+    height: 0;
     border-radius: 50%;
     background-color: #2b7a67;
     z-index: 10;
-    opacity: 0.5;
+    opacity: 0.3;
 
     box-shadow: var(--ondas);
 
-    transition-property: width, height;
-    transition-duration: 1.4s;
-    transition-timing-function:ease-out;
+    animation-name: onda;
+    animation-duration: 2.8s;
 }
 
-.ondinha {
+/* .ondinha {
     width: 50vmin;
     height: 50vmin;
-}
+} */
 
 
 .planta {
@@ -103,6 +118,18 @@ body {
     transform: translateY(-50%);
     width: 20vmin;
     height: 20vmin;
-    background-color: #5bad96;
+    background-color: #4c8f7c;
 
+}
+
+@keyframes onda {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    100% {
+        width: 70vmin;
+        height: 70vmin;
+    }
 }
