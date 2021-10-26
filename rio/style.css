@@ -6,41 +6,24 @@
 }
 
 :root {
-    --ondas: 0 0 0.5vmin calc(0vmin + 0.1vmin) inset #5dad98,
-    0 0 0.5vmin calc(0vmin + 0.2vmin) inset #4c8f7c,
-    0 0 1vmin calc(0vmin + 0.5vmin) inset #498a78,
-    0 0 5.5vmin calc(0vmin + 1vmin) inset #5bad96,
-    0 0 0vmin calc(0vmin + 2vmin) inset #39A388,
+    --ondas: 
+    0 0 5.5vmin calc(0vmin + 1vmin) inset #57e6c2,
+    0 0 0vmin calc(0vmin + 2vmin) inset #3bbd9c,
 
-    0 0 0.5vmin calc(2vmin + 0.1vmin) inset #5dad98,
-    0 0 0.5vmin calc(2vmin + 0.2vmin) inset #40796a,
-    0 0 1vmin calc(2vmin + 0.5vmin) inset #498a78,
-    0 0 5.5vmin calc(2vmin + 1vmin) inset #5bad96,
-    0 0 0vmin calc(2vmin + 2vmin) inset #39A388,
+    0 0 5.5vmin calc(2vmin + 1vmin) inset #57e6c2,
+    0 0 0vmin calc(2vmin + 2vmin) inset #3bbd9c,
 
-    0 0 0.5vmin calc(4vmin + 0.1vmin) inset #5dad98,
-    0 0 0.5vmin calc(4vmin + 0.2vmin) inset #40796a,
-    0 0 1vmin calc(4vmin + 0.5vmin) inset #498a78,
-    0 0 5.5vmin calc(4vmin + 1vmin) inset #5bad96,
-    0 0 0vmin calc(4vmin + 2vmin) inset #39A388,
+    0 0 5.5vmin calc(4vmin + 1vmin) inset #57e6c2,
+    0 0 0vmin calc(4vmin + 2vmin) inset #3bbd9c,
 
-    0 0 0.5vmin calc(6vmin + 0.1vmin) inset #5dad98,
-    0 0 0.5vmin calc(6vmin + 0.2vmin) inset #40796a,
-    0 0 1vmin calc(6vmin + 0.5vmin) inset #498a78,
-    0 0 5.5vmin calc(6vmin + 1vmin) inset #5bad96,
-    0 0 0vmin calc(6vmin + 2vmin) inset #39A388,
+    0 0 5.5vmin calc(6vmin + 1vmin) inset #57e6c2,
+    0 0 0vmin calc(6vmin + 2vmin) inset #3bbd9c,
 
-    0 0 0.5vmin calc(8vmin + 0.1vmin) inset #5dad98,
-    0 0 0.5vmin calc(8vmin + 0.2vmin) inset #40796a,
-    0 0 1vmin calc(8vmin + 0.5vmin) inset #498a78,
-    0 0 5.5vmin calc(8vmin + 1vmin) inset #5bad96,
-    0 0 0vmin calc(8vmin + 2vmin) inset #39A388,
+    0 0 5.5vmin calc(8vmin + 1vmin) inset #57e6c2,
+    0 0 0vmin calc(8vmin + 2vmin) inset #3bbd9c,
 
-    0 0 0.5vmin calc(10vmin + 0.1vmin) inset #5dad98,
-    0 0 0.5vmin calc(10vmin + 0.2vmin) inset #40796a,
-    0 0 1vmin calc(10vmin + 0.5vmin) inset #498a78,
-    0 0 5.5vmin calc(10vmin + 1vmin) inset #5bad96,
-    0 0 0vmin calc(50vmin + 2vmin) inset #39A388
+    0 0 5.5vmin calc(10vmin + 1vmin) inset #57e6c2,
+    0 0 0vmin calc(50vmin + 2vmin) inset #51e0bc
     ;
 }
 
@@ -61,7 +44,7 @@ body {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background: #39A388;
+    background: #51e0bc;
     overflow: hidden;
 
 }
@@ -83,18 +66,12 @@ body {
 }
 
 .over :first-child{
-    position: absolute;
-    
-    /* top: calc(100% * var(--m-y));
-    left:  calc(100% * var(--m-x));
-    transform: translateY(-50%) translateX(-50%); */
-    
+    position: absolute; 
     width: 0;
     height: 0;
     border-radius: 50%;
-    background-color: #2b7a67;
     z-index: 10;
-    opacity: 0.3;
+    opacity: 0.15;
 
     box-shadow: var(--ondas);
 
@@ -102,24 +79,159 @@ body {
     animation-duration: 2.8s;
 }
 
-/* .ondinha {
-    width: 50vmin;
-    height: 50vmin;
-} */
+.f1 {
+    top: 10vh;
+    left: 35vw;
+}
 
+.f2 {
+    top: 26vh;
+    left: 8vw;
+}
 
-.planta {
+.f3 {
+    top: 50vh;
+    left: 55vw;
+}
+
+.f4 {
+    top: 80vh;
+    left: 16vw;
+}
+
+.f5 {
+    top: 70vh;
+    left: 85vw;
+}
+
+.f6 {
+    top: 40vh;
+    left: 75vw;
+}
+
+.f7 {
+    top: 20vh;
+    left: 71vw;
+}
+
+.f8 {
+    top: 10vh;
+    left: 65vw;
+}
+
+.f9 {
+    top: 60vh;
+    left: 45vw;
+}
+
+.flor {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 50vmin;
-    left: 10vmin;
-    transform: translateY(-50%);
-    width: 20vmin;
-    height: 20vmin;
-    background-color: #4c8f7c;
 
+    width: 2vmin;
+    height: 6vmin;
+
+    border-radius: 45% 45% 50% 50%;
+    background: #bcccc5;
+}
+
+.nucleo {
+    position: absolute;
+    display: flex;
+
+    width: 1.2vmin;
+    height: 1.2vmin;
+
+    border-radius: 50%;
+    background: #eff89ba1;
+    z-index: 100;
+    box-shadow:
+    0 -0.2rem 0 0 #eff89ba1,
+    0 0.2rem 0 0 #eff89ba1,
+    -0.2rem 0 0 #eff89ba1, 
+    0.2rem 0 0 0 #eff89ba1;
+}
+
+.flor::after {
+    content: "";
+    position: absolute;
+    display: flex;
+
+    width: 2vmin;
+    height: 6vmin;
+
+    transform: rotate(120deg);
+
+    border-radius: 45% 45% 50% 50%;
+    background: #bcccc5;
+
+
+}
+
+.flor::before {
+    content: "";
+    position: absolute;
+    display: flex;
+
+    width: 2vmin;
+    height: 6vmin;
+
+    transform: rotate(-120deg);
+
+    border-radius: 45% 45% 50% 50%;
+    background: #bcccc5;
+}
+
+.planta {
+    position: absolute;
+    display: flex;
+    
+    border-radius: 45% 45% 50% 50%;
+    background: conic-gradient(#4dcfaf 45%, #51e0bc 45.1%, 60%, #4dcfaf 60.1%);
+}
+
+.p1{
+    top: 25vh;
+    left: 5vw;
+    width: 15vmin;
+    height: 17vmin;
+}
+
+.p2{
+    top: 5vh;
+    left: 30vw;
+    width: 17vmin;
+    height: 19vmin;
+}
+
+.p3{
+    top: 75vh;
+    left: 15vw;
+    width: 14vmin;
+    height: 16vmin;
+}
+
+.p4{
+    top: 35vh;
+    left: 50vw;
+    width: 11vmin;
+    height: 11vmin;
+}
+
+.p5{
+    top: 65vh;
+    left: 80vw;
+    width: 8vmin;
+    height: 8vmin;
+}
+
+.p6{
+    top: 15vh;
+    left: 70vw;
+    width: 12vmin;
+    height: 12vmin;
 }
 
 @keyframes onda {
@@ -129,7 +241,7 @@ body {
     }
 
     100% {
-        width: 70vmin;
-        height: 70vmin;
+        width: 80vmin;
+        height: 80vmin;
     }
 }

@@ -9,8 +9,40 @@
 </head>
 <body>
     <div id="over" class="over"></div>
-    <div class="planta"></div>
-    <div class="flor"></div>
+    <div class="planta p1"></div>
+    <div class="planta p2"></div>
+    <div class="planta p3"></div>
+    <div class="planta p4"></div>
+    <div class="planta p5"></div>
+    <div class="planta p6"></div>
+
+    <div class="flor f1">
+        <div class="nucleo"></div>
+    </div>
+    <div class="flor f2">
+        <div class="nucleo"></div>
+    </div>
+    <div class="flor f3">
+        <div class="nucleo"></div>
+    </div>
+    <div class="flor f4">
+        <div class="nucleo"></div>
+    </div>
+    <div class="flor f5">
+        <div class="nucleo"></div>
+    </div>
+    <div class="flor f6">
+        <div class="nucleo"></div>
+    </div>
+    <div class="flor f7">
+        <div class="nucleo"></div>
+    </div>
+    <div class="flor f8">
+        <div class="nucleo"></div>
+    </div>
+    <div class="flor f9">
+        <div class="nucleo"></div>
+    </div>
 </body>
 
 <script>
@@ -18,11 +50,12 @@
     const circle = document.getElementById("circle");
     const over = document.getElementById("over");
 
-    document.addEventListener("mouseenter", evento => {
+    document.addEventListener("click", evento => {
         
 
         const x = evento.clientX / innerWidth;
         const y = evento.clientY / innerHeight;
+
 
         root.style.setProperty("--m-x", x);
         root.style.setProperty("--m-y", y);
