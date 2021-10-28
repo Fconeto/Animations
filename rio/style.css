@@ -10,19 +10,19 @@
     0 0 5.5vmin calc(0vmin + 1vmin) inset #57e6c2,
     0 0 0vmin calc(0vmin + 2vmin) inset #3bbd9c,
 
-    0 0 5.5vmin calc(2vmin + 1vmin) inset #57e6c2,
-    0 0 0vmin calc(2vmin + 2vmin) inset #3bbd9c,
-
-    0 0 5.5vmin calc(4vmin + 1vmin) inset #57e6c2,
-    0 0 0vmin calc(4vmin + 2vmin) inset #3bbd9c,
+    0 0 5.5vmin calc(3vmin + 1vmin) inset #57e6c2,
+    0 0 0vmin calc(3vmin + 2vmin) inset #3bbd9c,
 
     0 0 5.5vmin calc(6vmin + 1vmin) inset #57e6c2,
     0 0 0vmin calc(6vmin + 2vmin) inset #3bbd9c,
 
-    0 0 5.5vmin calc(8vmin + 1vmin) inset #57e6c2,
-    0 0 0vmin calc(8vmin + 2vmin) inset #3bbd9c,
+    0 0 5.5vmin calc(9vmin + 1vmin) inset #57e6c2,
+    0 0 0vmin calc(9vmin + 2vmin) inset #3bbd9c,
 
-    0 0 5.5vmin calc(10vmin + 1vmin) inset #57e6c2,
+    0 0 5.5vmin calc(12vmin + 1vmin) inset #57e6c2,
+    0 0 0vmin calc(12vmin + 2vmin) inset #3bbd9c,
+
+    0 0 5.5vmin calc(15vmin + 1vmin) inset #57e6c2,
     0 0 0vmin calc(50vmin + 2vmin) inset #51e0bc
     ;
 }
@@ -38,7 +38,7 @@
     }
 }
 
-body {
+.fundo-1 {
     position: relative;
     display: flex;
     justify-content: center;
@@ -65,18 +65,19 @@ body {
     
 }
 
-.over :first-child{
+.over div{
     position: absolute; 
     width: 0;
     height: 0;
     border-radius: 50%;
     z-index: 10;
-    opacity: 0.15;
+    opacity: 0.3;
 
     box-shadow: var(--ondas);
 
     animation-name: onda;
-    animation-duration: 2.8s;
+    animation-duration: 2.2s;
+    animation-timing-function: ease-in;
 }
 
 .f1 {

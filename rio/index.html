@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="over" class="over"></div>
+    <div class="fundo-1">
+        <div id="over" class="over"></div>
     <div class="planta p1"></div>
     <div class="planta p2"></div>
     <div class="planta p3"></div>
@@ -43,6 +44,8 @@
     <div class="flor f9">
         <div class="nucleo"></div>
     </div>
+    </div>
+    
 </body>
 
 <script>
@@ -55,7 +58,6 @@
 
         const x = evento.clientX / innerWidth;
         const y = evento.clientY / innerHeight;
-
 
         root.style.setProperty("--m-x", x);
         root.style.setProperty("--m-y", y);
